@@ -1,8 +1,6 @@
 # mpesa-sender
 
-generated using Luminus version "2.9.12.62"
-
-FIXME
+This application is for demonstrating how to upload a csv file to a web page and send to money to MPESA B2C API.
 
 ## Prerequisites
 
@@ -14,7 +12,13 @@ You will need [Leiningen][1] 2.0 or above installed.
 
 To start a web server for the application, run:
 
-    lein run 
+Migrate database by running:
+
+_lein run migrate_
+
+Run the application:
+
+_lein run_ 
 
 ## License
 
