@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-12">
+        {% csrf-field %}
+        <input type="hidden" name="uploads" value={{uploads}} id="uploads">
+        <h2>Please verify information to send MPESA </h2>
+        <a class="btn btn-link" id="backToUpload" href="/">
+            << Back to Upload Page
+        </a>
+        <div class="clearfix"></div>
+        <table id="upload-payments" class="table table-stripped">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% if uploads %}
+            {% for upload in uploads %}
+            <tr>
+                <td>{{upload.date_created|date:yyyy-MM-ddHH:mm:ss}}</td>
+                <td>{{upload.full_name}}</td>
+                <td>{{upload.msisdn}}</td>
+                <td>{{upload.amount}}</td>
+                <td>OK</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

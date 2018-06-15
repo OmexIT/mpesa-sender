@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: conman:0.7.9">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/conman/conman/0.7.9/conman-0.7.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
